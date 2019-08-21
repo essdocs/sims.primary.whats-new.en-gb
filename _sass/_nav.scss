@@ -1,0 +1,22 @@
+#help-nav {
+  width: 100%;
+  top: 0;
+  z-index: 1070;
+  background: $sims-colours-grey-800;
+  border-bottom: 1px solid $sims-colours-grey-900;
+  color: #fff;
+}
+
+.nav-bar {
+  padding: 0.5em 1em;
+  display: flex;
+}
+
+.nav-bar-header {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  line-height: 3rem;
+  font-size: 1.33em;
+  z-index: -1;
+}

@@ -1,0 +1,58 @@
+---
+layout: docs
+title: What's New
+---
+
+<p class="lead">
+  Learn about recently released features.
+</p>
+
+{%- assign selection = site.docs | where: 'is-new', true | reverse -%}
+
+{%- for page in selection -%}
+  <article>
+
+    <div >
+
+   
+    <div>
+      <small class="timestamp float-right">    
+        {{page.date | date: "%b %Y"  }}
+      </small>
+      <strong >{{ page.title }}</strong>
+    </div>
+    
+    <p>
+      <span>{{ page.content | strip_html | truncatewords: 14 }}&nbsp;<a href="{{site.baseurl}}{{ page.url | remove: '.html' }}">Read&nbsp;more</a></span>
+    </p>
+
+    <div>
+    {% case page.type %}
+      {% when 'bug' %}
+        <span   style="color:#F50057; vertical-align: middle">
+            <img src="{{site.baseurl}}/assets/css/images/svg/bug.svg" style="margin-right:3px"><small >Bug Fix</small></span>
+   
+ 
+      {% when 'feedback' %}
+        <span style="color:#417505; vertical-align: middle">
+          <img src="{{site.baseurl}}/assets/css/images/svg/feedback.svg" style="margin-right:3px"><small >Feedback</small></span>
+          {% else %}
+          <span style="color:#F5A623; vertical-align: middle">
+            <img src="{{site.baseurl}}/assets/css/images/svg/newfeature.svg" style="margin-right:3px"><small >New Feature</small></span>
+    {% endcase %}
+    </div>
+  </div>
+    <hr>
+  </article>
+{%- endfor -%}
+<section>
+  <h2>Older</h2>
+  <ul>
+    {%- assign selection = site.docs | where: 'is-new', false | reverse  -%}
+    {%- for page in selection -%}
+    <li>
+      <a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a>
+    </li>
+    {%- endfor -%}
+    <ul>
+</section>

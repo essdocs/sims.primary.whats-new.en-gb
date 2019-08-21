@@ -1,0 +1,69 @@
+blockquote {
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  padding: $spacer;
+  padding-left: 3.5em;
+  margin: $spacer 0;
+  background-image: url(images/svg/info.svg);
+  background-size: 2em;
+  background-position: 1rem 1.2rem;
+  background-clip: padding-box;
+  background-repeat: no-repeat;
+
+  border-radius: (1rem/2);
+  border: 1px solid;
+  line-height: 1.5rem;
+  position: relative;
+
+  border-color: $sims-colours-light-blue-500;
+  background-color: $sims-colours-light-blue-50;
+
+
+  & p:before {
+    content: "Information";
+    font-weight: 900;
+    display: block;
+  }
+
+  &.tip {
+    background-image: url(images/svg/tip.svg);
+    border-color: $sims-colours-amber-700;
+    background-color: $sims-colours-amber-100;
+
+    & p:before {
+      content: "Tip";
+    }
+  }
+
+  &.note {
+    background-image: url(images/svg/note.svg);
+    border-color:$sims-colours-green-a700;
+    background-color:$sims-colours-green-50;
+
+    & p:before {
+      content: "Note";
+    }
+  }
+
+  &.warning {
+    background-image: url(images/svg/warning.svg);
+    border-color: $sims-colours-pink-a400;
+    background-color: $sims-colours-pink-50;
+
+    & p:before {
+      content: "Warning";
+    }
+  }
+
+  &.under-construction {
+    background-image: url(images/svg/clock-outline.svg);
+    border-color:$sims-colours-green-a700;
+    background-color:$sims-colours-green-50;
+
+    & p:before {
+      content: "Coming Soon";
+    }
+  }
+}

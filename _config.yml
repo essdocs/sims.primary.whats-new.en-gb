@@ -1,0 +1,26 @@
+name: SIMS Primary What's New
+
+markdown: kramdown
+
+permalink: none
+
+collections:
+  docs:
+    output: true
+  broadcast:
+    output: true
+  images:
+    output: true
+
+defaults:
+- scope:
+    path: ""
+    type: docs
+  values:
+    layout: docs
+
+exclude: ['_site', 'node_modules', 'src']
+
+sass:
+  sass_dir: _sass
+  style: compressed

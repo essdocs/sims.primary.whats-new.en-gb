@@ -1,0 +1,167 @@
+//
+// Color system
+//
+
+
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                1.2rem !default;
+$font-size-sm:                11px !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            600 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+$line-height-base:            1.5 !default;
+
+
+$body-bg:                   #fff !default;
+$body-color:                #222 !default;
+$text-muted:                 $sims-colours-grey-600 !default;
+
+
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: ($spacer * .25),
+    2: ($spacer * .5),
+    3: $spacer,
+    4: ($spacer * 1.5),
+    5: ($spacer * 3)
+  ),
+  $spacers
+);
+
+/*
+ms(0)   // 1.000rem
+ms(1)   // 1.250rem
+ms(2)   // 1.618rem
+ms(3)   // 2.023rem
+ms(4)   // 2.618rem
+ms(5)   // 3.273rem
+*/
+
+$h1-font-size:                2.023rem !default;
+$h2-font-size:                1.618rem !default;
+$h3-font-size:                1.250rem !default;
+$h4-font-size:                $font-size-base !default;
+$h5-font-size:                $font-size-base !default;
+$h6-font-size:                $font-size-base !default;
+
+$headings-margin-bottom:      ($spacer / 2) !default;
+$headings-font-family:        inherit !default;
+$headings-font-weight:        400 !default;
+$headings-line-height:        1.2 !default;
+$headings-color:              inherit !default;
+
+$lead-font-size:              ($font-size-base * 1.25) !default;
+$lead-font-weight:            300 !default;
+
+
+$paragraph-margin-bottom:   1rem !default;
+
+$dt-font-weight:              $font-weight-bold !default;
+
+
+$link-color:               #1a73e8 !default;
+$link-decoration:           none !default;
+$link-hover-color:          darken($link-color, 15%) !default;
+$link-hover-decoration:     underline !default;
+
+$table-cell-padding:          .75rem !default;
+$table-cell-padding-sm:       .3rem !default;
+
+$table-bg:                    transparent !default;
+$table-accent-bg:             rgba(#000, .05) !default;
+$table-hover-bg:              rgba(#000, .075) !default;
+$table-active-bg:             $table-hover-bg !default;
+
+$table-border-width:          1px !default;
+$table-border-color:          $sims-colours-grey-300 !default;
+
+$table-head-bg:               $sims-colours-grey-200 !default;
+$table-head-color:            $sims-colours-grey-700 !default;
+
+$table-dark-bg:               $sims-colours-grey-900 !default;
+$table-dark-accent-bg:        rgba(#fff, .05) !default;
+$table-dark-hover-bg:         rgba(#fff, .075) !default;
+$table-dark-border-color:     lighten($sims-colours-grey-900, 7.5%) !default;
+$table-dark-color:            $body-bg !default;
+
+$table-striped-order:         odd !default;
+
+$table-caption-color:         $text-muted !default;
+
+$label-margin-bottom:                   .5rem !default;
+
+
+$hr-border-color:             rgba(#000, .1) !default;
+$hr-border-width:             1px !default;
+$hr-margin-y:                 $spacer !default;
+
+$small-font-size:             11px !default;
+
+$mark-padding:                .2em !default;
+
+$mark-bg:                     #fcf8e3 !default;
+
+$list-inline-padding:         .5rem !default;
+$blockquote-font-size:        ($font-size-base * 1.25) !default;
+$blockquote-small-color:      $sims-colours-grey-600 !default;
+
+$grid-gutter-width:           30px !default;
+
+
+
+$zindex-popover:                    1060 !default;
+$zindex-tooltip:                    1070 !default;
+
+// Popovers
+
+$popover-font-size:                 $font-size-base !default;
+$popover-bg:                        #fff !default;
+$popover-max-width:                 350px !default;
+$popover-border-width:              1px !default;
+$popover-border-color:              rgba(#000, .2) !default;
+$popover-border-radius:             3px !default;
+$popover-box-shadow:                0 .25rem .5rem rgba(#000, .2) !default;
+
+$popover-header-bg:                 #fff !default;
+$popover-header-color:             $sims-colours-deep-purple-500 !default;
+$popover-header-padding-y:          .6rem !default;
+$popover-header-padding-x:          .75rem !default;
+
+$popover-body-color:                $body-color !default;
+$popover-body-padding-y:            $popover-header-padding-y !default;
+$popover-body-padding-x:            $popover-header-padding-x !default;
+
+$popover-arrow-width:               1rem !default;
+$popover-arrow-height:              .5rem !default;
+$popover-arrow-color:               $popover-bg !default;
+
+$popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default;
+
+$border-radius:               .25rem !default;
+$border-radius-lg:            .3rem !default;
+$border-radius-sm:            .2rem !default;
+
+$thumbnail-padding:                 .25rem !default;
+$thumbnail-bg:                      $body-bg !default;
+$thumbnail-border-width:            1px !default;
+$thumbnail-border-color:            $sims-colours-grey-500 !default;
+$thumbnail-border-radius:           $border-radius !default;
+$thumbnail-box-shadow:              none !default;
+
+
+// Figures
+
+$figure-caption-font-size:          90% !default;
+$figure-caption-color:              $sims-colours-grey-600 !default;
+
